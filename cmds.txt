@@ -1,0 +1,15 @@
+conda create --name heyGen python==3.9
+conda activate heyGen
+pip install ffmpeg-python
+pip install pysrt
+pip install -U transformers
+pip install torch torchvision torchaudio
+pip install accelerate
+pip install soundfile
+sudo apt-get install -y espeak-ng
+pip install coqui-tts
+pip install sentencepiece
+pip install pyrubberband
+pip install moviepy==1.0.3
+pip install numpy==1.24.4
+sudo apt install rubberband-cli
