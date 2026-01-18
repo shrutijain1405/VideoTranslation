@@ -22,23 +22,23 @@ cd VideoTranslation
 
 ### Setup Environment
 ```bash
-sh setup.sh
+source setup.sh
 ```
 
 ---
 
 ## Running inference
 
-First get the translated Audio. 
-Note: Please change the input arguments in ```trans_audio_inference.sh``` before running.
+First get the translated Audio. \
+Note: Please change the input arguments in ```trans_audio_inference.sh``` before running. \
 Run - 
 ```bash
 conda activate vidTrans
-sh trtrans_audio_inference.sh
+sh trans_audio_inference.sh
 ```
 
-Then get the Lip-synced video.
-Note: Please change the input arguments in ```inference.sh``` before running.
+Then get the Lip-synced video. \
+Note: Please change the input arguments in ```inference.sh``` before running. \
 ```bash
 conda activate latentsync
 cd LatentSync
