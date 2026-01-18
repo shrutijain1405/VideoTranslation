@@ -2,22 +2,11 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, AutoModelForSeq2Se
 
 
 def load_model_trans(device):
-    # Load model and tokenizer
-    # model_name = "VAGOsolutions/SauerkrautLM-Translator-LFM2.5-1.2B"
-    # model = AutoModelForCausalLM.from_pretrained(
-    #     model_name,
-    #     device_map="auto",
-    #     torch_dtype="bfloat16",
-    #     trust_remote_code=True,
-    # )
-    # model.to(device)
-    # tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
-    # return model, tokenizer
 
+    model_name = "Helsinki-NLP/opus-mt-en-de"
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    tokenizer = AutoTokenizer.from_pretrained("Helsinki-NLP/opus-mt-en-de")
-
-    model = AutoModelForSeq2SeqLM.from_pretrained("Helsinki-NLP/opus-mt-en-de")
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
     model.to(device)
 
     return model, tokenizer
@@ -50,11 +39,6 @@ def run_inference_translations(model, tokenizer, inp_text):
     )
 
     output_text = tokenizer.decode(output[0], skip_special_tokens=True)
-
-    # if "<|im_start|>assistant" in output_text:
-    #     output_text = output_text.split("<|im_start|>assistant")[-1]
-    # if "<|im_end|>" in output_text:
-    #     output_text = output_text.split("<|im_end|>")[0]
 
     return output_text.strip()
 
