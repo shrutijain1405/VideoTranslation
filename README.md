@@ -88,6 +88,8 @@ https://github.com/user-attachments/assets/ad7a9a98-8a80-422d-ae52-e6fb42e24b02
 
 **Output With LipSync**
 
+https://github.com/user-attachments/assets/811a7d62-b335-446d-8d76-d1f73f10b941
+
 
 
 ---
