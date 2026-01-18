@@ -75,8 +75,12 @@ python main.py \
 
 ## Results
 
+***Input***
+https://github.com/user-attachments/assets/86d0ce65-9c1e-48ab-a62f-fe65b2a48b4d
 
 
+
+***Output**
 https://github.com/user-attachments/assets/ad7a9a98-8a80-422d-ae52-e6fb42e24b02
 
 
