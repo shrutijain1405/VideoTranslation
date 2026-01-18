@@ -3,30 +3,24 @@
 
 ## Project Overview
 
-This project implements a **video translation pipeline** that takes an input Video, translates the Audio into a target language (German), and synchronizes the translated audio back with the original video.
+This project implements a **video translation pipeline** that takes an input Video, translates the Audio into a target language (German), and synchronizes the translated audio back with the original video with lip-syncing.
 
 The focus is on:
 - Accurate text to text translation
 - Text-to-speech with voice cloning
 - Temporal alignment between original and translated audio segments
-
+- Lipsync the new audio to video
 ---
 
 ## Setup Instructions
 
-### 1. Clone the Repository
+### Clone the Repository
 ```bash
 git clone https://github.com/shrutijain1405/VideoTranslation.git
 cd VideoTranslation
 ```
 
-### 2. Create and Activate Conda Environment
-```bash
-conda create --name vidTrans python=3.10
-conda activate vidTrans
-```
-
-### 3. Install Dependencies
+### Setup Environment
 ```bash
 sh setup.sh
 ```
@@ -35,16 +29,21 @@ sh setup.sh
 
 ## Running inference
 
-Example:
+First get the translated Audio. 
+Note: Please change the input arguments in ```trans_audio_inference.sh``` before running.
+Run - 
 ```bash
-
-python main.py \
-  --input_video path/to/input.mp4 \
-  --input_srt_file path/to/srt/file.srt \
-  --output_dir path/to/output_dir/
-
+conda activate vidTrans
+sh trtrans_audio_inference.sh
 ```
 
+Then get the Lip-synced video.
+Note: Please change the input arguments in ```inference.sh``` before running.
+```bash
+conda activate latentsync
+cd LatentSync
+sh ./inference.sh
+``` 
 ---
 
 ## Project Description
@@ -71,18 +70,24 @@ python main.py \
     - global syncing - to ensure final audio lengths are exactly the same, sync the merged audio with input audio again without limits
 6. **Merging translated audio with original video**
     - using ```ffmpeg-python```
+7. **Lip-syncing**
+    - use [LatentSync](https://github.com/bytedance/LatentSync) to synchronize the final output audio and the input video.
 
 
 ## Results
 
-***Input***
+**Input**
 
 https://github.com/user-attachments/assets/86d0ce65-9c1e-48ab-a62f-fe65b2a48b4d
 
 
-***Output**
+**Output Without Lipync**
 
 https://github.com/user-attachments/assets/ad7a9a98-8a80-422d-ae52-e6fb42e24b02
+
+
+**Output With LipSync**
+
 
 
 ---
@@ -96,5 +101,4 @@ https://github.com/user-attachments/assets/ad7a9a98-8a80-422d-ae52-e6fb42e24b02
 
 ## Future Work
 
-- LipSyncing
 - Multi-speaker support
