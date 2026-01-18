@@ -22,7 +22,7 @@ cd VideoTranslation
 
 ### 2. Create and Activate Conda Environment
 ```bash
-conda create --name vidTrans python=3.9
+conda create --name vidTrans python=3.10
 conda activate vidTrans
 ```
 
