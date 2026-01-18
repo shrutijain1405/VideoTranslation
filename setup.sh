@@ -28,6 +28,7 @@ sudo apt-get install -y ffmpeg
 echo "cloning into LatentSync"
 git clone https://github.com/bytedance/LatentSync.git
 cd LatentSync
+conda deactivate
 
 echo "Setting up env for LatentSync"
 source setup_env.sh
