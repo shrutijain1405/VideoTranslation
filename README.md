@@ -29,20 +29,9 @@ source setup.sh
 
 ## Running inference
 
-First get the translated Audio. \
-Note: Please change the input arguments in ```trans_audio_inference.sh``` before running.
 ```bash
-conda activate vidTrans
-sh trans_audio_inference.sh
+run_inference.sh absolute/path/to/input_video.mp4 absolute/path/to/input_srt.srt absolute/path/to/ouput_dir
 ```
-
-Then get the Lip-synced video. \
-Note: Please change the input arguments in ```inference.sh``` before running.
-```bash
-conda activate latentsync
-cd LatentSync
-sh ./inference.sh
-``` 
 ---
 
 ## Project Description
