@@ -1,1 +1,3 @@
 cmds.txt
+outputs/
+__pycache__/
