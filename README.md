@@ -30,7 +30,7 @@ source setup.sh
 ## Running inference
 
 ```bash
-run_inference.sh absolute/path/to/input_video.mp4 absolute/path/to/input_srt.srt absolute/path/to/ouput_dir
+source run_inference.sh absolute/path/to/input_video.mp4 absolute/path/to/input_srt.srt absolute/path/to/ouput_dir
 ```
 ---
 
