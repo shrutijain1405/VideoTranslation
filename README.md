@@ -30,15 +30,14 @@ source setup.sh
 ## Running inference
 
 First get the translated Audio. \
-Note: Please change the input arguments in ```trans_audio_inference.sh``` before running. \
-Run - 
+Note: Please change the input arguments in ```trans_audio_inference.sh``` before running.
 ```bash
 conda activate vidTrans
 sh trans_audio_inference.sh
 ```
 
 Then get the Lip-synced video. \
-Note: Please change the input arguments in ```inference.sh``` before running. \
+Note: Please change the input arguments in ```inference.sh``` before running.
 ```bash
 conda activate latentsync
 cd LatentSync
@@ -76,20 +75,44 @@ sh ./inference.sh
 
 ## Results
 
-**Input**
+**Input Video**
 
 https://github.com/user-attachments/assets/86d0ce65-9c1e-48ab-a62f-fe65b2a48b4d
 
 
-**Output Without Lipync**
+**Input Audio Segment**
+
+[input_segment_3.wav](https://github.com/user-attachments/files/24699310/input_segment_3.wav)
+
+
+**Original Transcript Segment**
+
+Over a million wildebeest, zebras, and gazelles travel vast distances in search of fresh grass, braving rivers filled with crocodiles.
+
+
+**Translated Transcript Segment**
+
+Über eine Million Wildebees, Zebras und Gazellen reisen weite Entfernungen auf der Suche nach frischem Gras, dürren Flüssen mit Krokodilen.
+
+
+**Translated Audio Segment**
+
+[trans_segment_3.wav](https://github.com/user-attachments/files/24699327/trans_segment_3.wav)
+
+
+**Synced Translated Audio Segment**
+
+[synced_segment_3.wav](https://github.com/user-attachments/files/24699333/synced_segment_3.wav)
+
+
+**Output Without Lip Sync**
 
 https://github.com/user-attachments/assets/ad7a9a98-8a80-422d-ae52-e6fb42e24b02
 
 
-**Output With LipSync**
+**Output With Lip Sync**
 
 https://github.com/user-attachments/assets/811a7d62-b335-446d-8d76-d1f73f10b941
-
 
 
 ---
