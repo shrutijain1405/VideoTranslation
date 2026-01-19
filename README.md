@@ -117,13 +117,11 @@ https://github.com/user-attachments/assets/811a7d62-b335-446d-8d76-d1f73f10b941
 
 ---
 
-## Limitations
+## Limitations and Future Work
 
 - Supports only English to German translation
 - Audio may get distorted if translation lengths are very different
+- LipSyncing is very computationally heavy
+- Assumes that there is only one speaker
 
 ---
-
-## Future Work
-
-- Multi-speaker support
